@@ -1,0 +1,122 @@
+.hof-page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 4rem 3rem;
+}
+
+.hof-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hof-label {
+  font-size: 0.75rem;
+  color: #d4af37;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hof-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 300;
+  margin: 0.5rem 0;
+}
+
+.hof-sub {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.hof-line {
+  width: 60px;
+  height: 1px;
+  background: rgba(212,175,55,0.5);
+  margin: 0 auto;
+}
+
+.hof-loading,
+.hof-empty {
+  text-align: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 1rem;
+  margin-top: 4rem;
+}
+
+.hof-loading {
+  font-size: 2rem;
+  color: #d4af37;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.hof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hof-card {
+  background: #111;
+  border: 1px solid rgba(212,175,55,0.2);
+  border-top: 1px solid rgba(212,175,55,0.6);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hof-star-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(212,175,55,0.9);
+  color: #0a0a0a;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.hof-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.hof-info {
+  padding: 1.5rem;
+}
+
+.hof-caption {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  font-style: italic;
+  margin: 0 0 0.75rem;
+}
+
+.hof-author {
+  font-size: 0.8rem;
+  color: #d4af37;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.75rem;
+}
+
+.hof-stats {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+}

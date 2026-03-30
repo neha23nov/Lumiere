@@ -1,0 +1,250 @@
+.feed-page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 4rem 3rem;
+}
+
+.feed-header {
+  margin-bottom: 1rem;
+}
+
+.feed-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+}
+
+.feed-sub {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0.25rem 0 2rem;
+}
+
+.mood-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.mood-filter-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.4);
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mood-filter-btn:hover {
+  border-color: rgba(212,175,55,0.4);
+  color: rgba(255,255,255,0.7);
+}
+
+.mood-filter-btn.active {
+  background: rgba(212,175,55,0.15);
+  border-color: rgba(212,175,55,0.5);
+  color: #d4af37;
+}
+
+.feed-loading {
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0;
+  font-size: 2rem;
+  color: #d4af37;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.feed-error,
+.feed-empty {
+  text-align: center;
+  padding: 6rem 0;
+  color: rgba(255,255,255,0.3);
+  line-height: 2;
+}
+
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.post-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.06);
+  cursor: pointer;
+  transition: transform 0.4s, border-color 0.4s;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212,175,55,0.2);
+}
+
+.post-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.5);
+  background: rgba(0,0,0,0.5);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  z-index: 2;
+  letter-spacing: 0.1em;
+}
+
+.star-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(212,175,55,0.9);
+  color: #0a0a0a;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.post-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s;
+}
+
+.post-card:hover .post-image {
+  transform: scale(1.03);
+}
+
+.thought-card {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 2rem;
+  background: linear-gradient(135deg, #111, #1a1a1a);
+}
+
+.thought-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  color: rgba(212,175,55,0.3);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.thought-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.post-overlay {
+  padding: 1.2rem;
+  background: #0d0d0d;
+}
+
+.post-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.post-moods {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.post-mood-tag {
+  font-size: 0.65rem;
+  color: rgba(212,175,55,0.7);
+  border: 1px solid rgba(212,175,55,0.2);
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.post-caption {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.caption-quote {
+  color: rgba(212,175,55,0.5);
+  margin-right: 0.2rem;
+  font-size: 1.2rem;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+}
+
+.post-author {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author-tier {
+  font-size: 0.65rem;
+  color: #d4af37;
+  border: 1px solid rgba(212,175,55,0.3);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.like-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.4);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.like-btn:hover,
+.like-btn.active:hover {
+  border-color: rgba(212,175,55,0.5);
+  color: #d4af37;
+}

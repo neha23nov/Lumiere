@@ -1,0 +1,91 @@
+/* Navbar.css — dark gold theme matching your existing UI */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3rem;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.navbar-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: #d4af37;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-link {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.navbar-link:hover {
+  color: #d4af37;
+}
+
+.navbar-username {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.navbar-tier {
+  font-size: 0.7rem;
+  color: #d4af37;
+  border: 1px solid rgba(212,175,55,0.4);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.navbar-btn {
+  font-size: 0.8rem;
+  color: #0a0a0a;
+  background: #d4af37;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+}
+
+.navbar-btn:hover { opacity: 0.85; }
+
+.navbar-logout {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  background: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.navbar-logout:hover {
+  color: #fff;
+  border-color: rgba(255,255,255,0.4);
+}
