@@ -108,7 +108,7 @@ function Feed() {
       {/* Loading state */}
       {loading && (
         <div className="feed-loading">
-          <span className="loading-star">✦</span>
+          <div className="loading-spinner"></div>
         </div>
       )}
 

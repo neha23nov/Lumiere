@@ -56,17 +56,29 @@
 }
 
 .feed-loading {
+  min-height: 60vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 6rem 0;
-  font-size: 2rem;
-  color: #d4af37;
-  animation: pulse 1.5s ease-in-out infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.3; }
+.loading-spinner {
+  width: 52px;
+  height: 52px;
+  border: 2px solid rgba(212,175,55,0.15);
+  border-top: 2px solid #d4af37;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .feed-error,
